@@ -1,0 +1,87 @@
+
+  <div class="heading">
+    Add Employee
+   </div>
+<div class="container">
+
+  <form [formGroup]="registerform" (ngSubmit)="submitform()">
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="name" formControlName="name" appOnlyAlphabets required><br />
+        <div *ngIf="submitted && registerform.controls['name'].errors" class="text-danger">
+          <div *ngIf="registerform.controls['name'].errors?.['required']">Name is Required</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname"> Employee Designation</label>
+      </div>
+      <div class="col-75">
+        <input type="name" formControlName="empdesignation"><br />
+        <div *ngIf="submitted && registerform.controls['empdesignation'].errors" class="text-danger">
+          <div *ngIf="registerform.controls['empdesignation'].errors?.['required']">Enter Employee Designation </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Technology</label>
+      </div>
+      <div class="col-75">
+        <select formControlName="technology">
+          <option *ngFor="let techname of techname" value="{{techname}}">{{techname}}</option>
+        </select>
+        <div *ngIf="submitted && registerform.controls['technology'].errors" class="text-danger">
+          <div *ngIf="registerform.controls['technology'].errors?.['required']">Select Technology</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">City</label>
+      </div>
+      <div class="col-75">
+        <input type="name" formControlName="city"><br />
+        <div *ngIf="submitted && registerform.controls['city'].errors" class="text-danger">
+          <div *ngIf="registerform.controls['city'].errors?.['required']">CityName is Required</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject"> Mobile No.</label>
+      </div>
+      <div class="col-75">
+        <input type="number" formControlName="mobileno" appOnlynumber ><br />
+        <div *ngIf="submitted && registerform.controls['mobileno'].errors" class="text-danger">
+          <div *ngIf="registerform.controls['mobileno'].errors?.['required']">Please Enter Mobile no</div>
+          <div *ngIf="this.registerform.controls['mobileno'].errors?.['pattern']">Enter Valid Mobile No</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Date of Joining</label>
+      </div>
+      <div class="col-75">
+        <input type="date" formControlName="date" max={{GetTodayDate()}}>
+        <div *ngIf="submitted && registerform.controls['date'].errors" class="text-danger">
+          <div *ngIf="registerform.controls['date'].errors?.['required']">Date is Required</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+
+<router-outlet></router-outlet>

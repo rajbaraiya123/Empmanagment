@@ -1,0 +1,32 @@
+<div class="main">
+<mat-toolbar >
+
+    <span>Employee Managment</span>
+    <span class="example-spacer"></span>
+    <button (click)="navigate()">
+    <span>Add Employee</span>
+    </button>
+    
+  </mat-toolbar>
+<table id="customers">
+    <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Technology</th>
+        <th>Date Of Joinng</th>
+        <th>Phone no</th>
+        <th>City</th>
+        <th>Experience</th>
+    </tr>
+    <tr *ngFor="let Emp of EmpList">
+        <td>{{Emp.name}}</td>
+        <td>{{Emp.designation}}</td>
+        <td>{{Emp.technology}}</td>
+        <td>{{Emp.date | date}}</td>
+        <td>{{Emp.phone}}</td>
+        <td>{{Emp.city}}</td>
+        <td ><span *ngIf="CountExp(Emp.date).years > 0 || CountExp(Emp.date).months> 0 "> {{CountExp(Emp.date).years}}  Years {{CountExp(Emp.date).months}}  Months</span> <span *ngIf="CountExp(Emp.date).years === 0 && CountExp(Emp.date).months === 0 "> Less than 30Days</span>  </td>
+        
+        </tr>
+        </table>
+</div>

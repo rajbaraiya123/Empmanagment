@@ -1,0 +1,86 @@
+{
+  "Employeelist": [
+    {
+      "id": 1,
+      "name": "Raj Baraiya",
+      "phone": 9824406620,
+      "designation": "Data Scientist",
+      "technology": "java",
+      "city": "Bhavnagar",
+      "date": 1458172800000
+    },
+    {
+      "id": 2,
+      "name": "Rahul Sharma ",
+      "phone": 9824404422,
+      "designation": "SED",
+      "technology": "React",
+      "city": "Ahmedabad",
+      "date": 1592870400000
+    },
+    {
+      "id": 3,
+      "name": "Ali Muzir",
+      "phone": 3456323244,
+      "designation": "tester",
+      "technology": "React",
+      "city": "noida",
+      "date": 1352937600000
+    },
+    {
+      "id": 4,
+      "name": "Saachi Mehra",
+      "phone": 1234322123,
+      "designation": "Intern",
+      "technology": "Python",
+      "city": "chennai",
+      "date": 1421712000000
+    },
+    {
+      "id": 5,
+      "name": "Raj mehra",
+      "phone": 2123321321,
+      "designation": "intern",
+      "technology": "java",
+      "city": "Ahmedabad",
+      "date": 1660176000000
+    },
+    {
+      "id": 7,
+      "name": "Manish k",
+      "phone": 9824406620,
+      "designation": "Jr Sofwear dev",
+      "technology": "React",
+      "city": "bhavnagar",
+      "date": 1549929600000
+    },
+    {
+      "id": 8,
+      "name": "Raj b ",
+      "phone": 2676726768,
+      "designation": "Consultunt",
+      "technology": "java",
+      "city": "bhavnagar",
+      "date": 1661299200000
+    },
+    {
+      "id": 9,
+      "name": "mohit d",
+      "phone": 2873873278,
+      "designation": "HR",
+      "technology": "React",
+      "city": "bhopal",
+      "date": 1649980800000
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
